@@ -43,13 +43,18 @@ int divisoriPrimi (int n,vector<int> &d) {
     // prede un vector<int> e lo riempie con i divisori primi di n;
     // restituisce il numero di divisolri primi
     d.clear();
-    int i;
-    for (i=2;i<=n;i++) {
+    int i=2;
+    if (n%(i++)==0) {
+        while (!(n&1)) n/=2;
+        d.push_back(2);
+    }
+    for (i=3;i*i<=n;i+=2) {
         if (n%i==0) {
             d.push_back(i);
             while (n%i==0) n/=i;
         }
     }
+    if (n>2) d.push_back(n);
     return d.size();
 }
 
