@@ -62,12 +62,6 @@ modem, web, lettore dvd
 sostituiranno gli uomini,
 mi spiace ma è così
 
-*/
-
-conditional_t<true, multimap<multiset<bool>, int64_t>, tuple<shared_ptr<int32_t>, string, int, mt19937_64>> flag[10];
-
-/*
-
 sono l'uomo tecnologico tecnologico
 sono l'uomo tecnologico tecnologico
 
@@ -106,5 +100,9 @@ sono l'uomo tecnologico tecnologico
 sono l'uomo tecnologico tecnologicoooooooo
 sono l'uomo tecnologico tecnologico
 */
+
+conditional_t<true, multimap<multiset<bool>, int64_t>, tuple<shared_ptr<int32_t>, string, int, mt19937_64>> flag[10];
+
+
 
 
