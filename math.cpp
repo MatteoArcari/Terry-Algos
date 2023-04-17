@@ -19,7 +19,7 @@ int lcm (int a,int b) {
     return a/gcd(a,b)*b;
 }
 
-void crivello (int n,vector<bool> &p) {
+void sieve (int n,vector<bool> &p) {
     /*
     Riceve un vector<bool> e la dimensione. 
     Dopo questa funzione p[i] vale true se i è primo; false altrimenti
@@ -33,13 +33,13 @@ void crivello (int n,vector<bool> &p) {
     }
 }
 
-bool primo (int n) {
+bool isPrime (int n) {
     // restituisce true se n è primo; flase altrimenti
     for (int i=2;i*i<=n;i++) if (n%i) return 0;
     return 1;
 }
 
-int divisoriPrimi (int n,vector<int> &d) {
+int primeDivisors (int n,vector<int> &d) {
     // prede un vector<int> e lo riempie con i divisori primi di n;
     // restituisce il numero di divisolri primi
     d.clear();
@@ -63,7 +63,7 @@ signed main() {
     // Esempio per divisoriPrimi
     int n=60;
     vector<int> d;
-    cout << divisoriPrimi(n,d) << endl;
+    cout << primeDivisors(n,d) << endl;
     for (auto x:d) cout << x << " ";
     cout << endl;
 
