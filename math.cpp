@@ -39,21 +39,28 @@ bool primo (int n) {
     return 1;
 }
 
-vector<int> divisoriPrimi (int n) {
-    // restituisce un vector<int> con i divisori primi di n
-    vector<int> res;
-    for (int i=2;i*i<=n;i++) {
-        if (i%n==0) {
-            res.push_back(i);
-            while (i%n==0) n/=i;
+int divisoriPrimi (int n,vector<int> &d) {
+    // prede un vector<int> e lo riempie con i divisori primi di n;
+    // restituisce il numero di divisolri primi
+    d.clear();
+    int i;
+    for (i=2;i<=n;i++) {
+        if (n%i==0) {
+            d.push_back(i);
+            while (n%i==0) n/=i;
         }
     }
-    if (n==2) res.push_back(2);
-    return res;
+    return d.size();
 }
 
 signed main() {
-    
+
+    // Esempio per divisoriPrimi
+    int n=60;
+    vector<int> d;
+    cout << divisoriPrimi(n,d) << endl;
+    for (auto x:d) cout << x << " ";
+    cout << endl;
 
     return 0;
 }
