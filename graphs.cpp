@@ -75,6 +75,19 @@ int shortestPath (int n,vector<vector<pair<int,int>>> &adj,int start,int end) {
 
 signed main() {
 
+    // Codice di esempio
+    // problema "dijkstra" da training.olinfo
+    
+    freopen ("input.txt","r",stdin);
+    freopen("output.txt","w",stdout);
+    int n,m;
+    cin >> n >> m;
+    int s,e;
+    cin >> s >> e;
+    vector<vector<pair<int,int>>> adj;
+    readWeightedGraph(n+1,m,adj,1); // n+1 per indici 1-based
+    
+    cout << shortestPath(n+1,adj,s,e) << endl;
 
 
     return 0;
