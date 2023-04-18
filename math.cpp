@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#define MOD 1000000007
 using namespace std;
 typedef long long ll;
 
@@ -17,6 +18,15 @@ int gcd (int a,int b) {
 int lcm (int a,int b) {
     // Restitusce il minimo comune multiplo
     return a/gcd(a,b)*b;
+}
+
+int exp (int b,int e,int mod=MOD) {
+    // esponenziazione veloce, prende base e esponente
+    if (!e) return 1;
+    int res=exp(b,e/2);
+    res=(res*res)%mod;
+    if (res&1) res=(res*b)%mod;
+    return res;
 }
 
 void sieve (int n,vector<bool> &p) {
