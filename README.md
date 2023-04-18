@@ -4,4 +4,4 @@ Raccolta di algoritmi, funzioni e strutture dati utili per le selezioni territor
 
 Per evitare problemi con il codice, evita modifiche a istruzioni di cui non capisci bene lo scopo.
 
-Have fun
+Have fun!
