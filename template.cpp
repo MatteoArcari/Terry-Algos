@@ -13,7 +13,7 @@ void solve() {
     // e stampa la risposta con endl alla fine
 }
 
-signed main() {
+int main() {
     // Togli i commenti per leggere da file
 
     //freopen ("input.txt","r",stdin);
