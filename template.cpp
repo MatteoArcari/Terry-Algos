@@ -3,9 +3,8 @@
 using namespace std;
 typedef long long ll;
 
-#define INF LLONG_MAX
+#define INF INT_MAX
 #define endl '\n'
-#define int ll
 
 // Non modificare le cose sopra
 
