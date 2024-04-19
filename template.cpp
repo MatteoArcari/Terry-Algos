@@ -4,7 +4,6 @@ using namespace std;
 typedef long long ll;
 
 #define INF INT_MAX
-#define endl '\n'
 
 // Non modificare le cose sopra
 
