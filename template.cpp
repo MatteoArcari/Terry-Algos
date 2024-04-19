@@ -8,10 +8,9 @@ typedef long long ll;
 
 // Non modificare le cose sopra
 
-int solve () {
+void solve() {
     // Leggi l'input del singolo caso 
-    // e restituisci la risposta
-    return 42;
+    // e stampa la risposta con endl alla fine
 }
 
 signed main() {
@@ -21,8 +20,9 @@ signed main() {
     //freopen ("output.txt","w",stdout);
 
     int T; cin >> T;
-    for (int t=1;t<=T;t++) {
-        cout << "Case #" << t << ": " << solve() << endl;
+    for (int t = 1; t <= T; t++) {
+        cout << "Case #" << t << ": ";
+        solve();
     }
 
     return 0;
