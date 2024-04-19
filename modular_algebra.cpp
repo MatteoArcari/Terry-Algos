@@ -1,45 +1,34 @@
-#include <bits/stdc++.h>
 #define MOD 1000000007
-using namespace std;
-typedef long long ll;
-
 #define INF LLONG_MAX
-#define endl '\n'
-#define int ll
+typedef long long ll;
 
 // Non modificare le cose sopra
 
-int modExp (int b,int e,int mod=MOD) {
+ll modExp (ll b, ll e, ll mod = MOD) {
     // esponenziazione veloce,
     // restituisce (a^b)%mod
-    if (!e) return 1;
-    int res=modExp(b,e/2);
-    res=(res*res)%mod;
-    if (res&1) res=(res*b)%mod;
-    return res;
+    if (e == 0) return 1ll;
+    if (e & 1) return (b * modExp(b, e - 1, mod))%mod;
+    ll res = modExp(b, e / 2ll, mod);
+    return (res * res) % mod;
 }
 
-int modAdd(int a,int b,int mod=MOD) {
+ll modAdd(ll a, ll b, ll mod = MOD) {
     // somma a e b modulo mod
-    return ((a%mod)+(b%mod)) % mod;
+    return ((a % mod) + (b % mod)) % mod;
 }
 
-int modSub(int a,int b,int mod=MOD) {
+ll modSub(ll a, ll b, ll mod = MOD) {
     // sottrae b ad a modulo mod
-    return (a+mod-b)%mod;
+    return (a + mod - b) % mod;
 }
 
-int modMul(int a,int b,int mod=MOD) {
+ll modMul(ll a, ll b, ll mod = MOD) {
     // moltiplica a e b modulo mod
-    return ((a%mod)*(b%mod))%mod;
+    return ((a % mod) * (b % mod)) % mod;
 }
 
-int modDiv(int a,int b,int mod=MOD) {
+ll modDiv(ll a, ll b, ll mod = MOD) {
     // divide a per b modulo mod
-    return ((a%mod)*modExp(b,mod-2,mod))%mod;
-}
-
-signed main() {
-
-    return 0;
+    return ((a % mod) * modExp(b, mod-2, mod)) % mod;
 }
