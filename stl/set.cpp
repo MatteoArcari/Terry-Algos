@@ -5,10 +5,6 @@ using namespace std;
 
 int main() {
 
-    ///////////////////
-    ///     SET     ///
-    ///////////////////
-
     // la chiave può essere un qualunque tipo comparabile
     set<string>  s;
     unordered_set<int> us;

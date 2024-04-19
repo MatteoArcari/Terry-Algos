@@ -5,10 +5,6 @@ using namespace std;
 
 int main() {
 
-    /////////////////////
-    ///     MAPPA     ///
-    /////////////////////
-
     // la chiave può essere un qualunque tipo comparabile
     map<char, int>  m;
     unordered_map<int, string> um;

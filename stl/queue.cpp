@@ -4,10 +4,6 @@ using namespace std;
 
 int main() {
 
-    ////////////////////
-    ///     CODA     ///
-    ////////////////////
-
     queue<int> q;
 
     // aggiungo un elemento in coda

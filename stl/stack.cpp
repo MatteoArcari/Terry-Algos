@@ -4,10 +4,6 @@ using namespace std;
 
 int main() {
 
-    ////////////////////
-    ///     PILA     ///
-    ////////////////////
-
     stack<int> s;
 
     // aggiungo un elemento in cima

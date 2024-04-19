@@ -4,10 +4,6 @@ using namespace std;
 
 int main() {
 
-    ///////////////////////////////
-    ///     CODA A PRIORITÀ     ///
-    ///////////////////////////////
-
     priority_queue<int> pq;
 
     // aggiungo un elemento in coda
